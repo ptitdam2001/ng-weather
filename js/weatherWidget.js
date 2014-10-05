@@ -13,7 +13,7 @@ var WeatherModule = angular.module('WeatherModule', [])
   +'<div class="temperature wi wi-{{weatherData.weather.0.icon}}"></div>'
  // +'  <h2>{{weatherData.main.temp | number : 1}}<span class="degree-symbol">°</span><span class="celcius">C</span></h2>'
   +'</td><td>'
-  +'<div class="ico_temp"><div class="de"><div class="den"><div class="dene"><div class="denem"><div class="deneme">{{weatherData.main.temp | number : 0}}<strong>&deg;</strong></div></div></div></div></div></div>'
+  +'<div class="ico_temp"><div class="de"><div class="den"><div class="dene"><div class="denem"><div class="deneme">{{weatherData.main.temp | number : 0}}<strong>&deg;</strong><!--<i class="wi wi-celsius"></i>--></div></div></div></div></div></div>'
   +'</td><td>'
   +'<div class="information">'
   +'  <span class="description">{{weatherData.weather.0.description}}</span>'
@@ -36,7 +36,7 @@ var WeatherModule = angular.module('WeatherModule', [])
 		restrict: 'E',
 		priority: 10,
 		terminal: false,
-//		template_url: '/assets/html/weather.html',
+//		template_url: 'html/weather.tpl.html',
 		template: templateHtml,
 		replace: true,
 		transclude: false,
