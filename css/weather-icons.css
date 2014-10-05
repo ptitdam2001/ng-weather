@@ -1,5 +1,5 @@
 /*!
- *  Weather Icons 1.2
+ *  Weather Icons 1.1
  *  Weather themed icons for Bootstrap
  *  ------------------------------------------------------------------------------
 * Maintained at http://erikflowers.github.io/weather-icons
@@ -13,7 +13,7 @@
  *    http://opensource.org/licenses/mit-license.html
  *  - Documentation licensed under CC BY 3.0 -
  *    http://creativecommons.org/licenses/by/3.0/
- *  - Inspired by and works great as a companion with Font Awesome
+ *  - Inspired by and works great as a companion with Font Aweosme
  *    "Font Awesome by Dave Gandy - http://fontawesome.io"
  *
  *  Weather Icons Bootstrap Package Author - Erik Flowers - erik@helloerik.com
@@ -37,53 +37,59 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.wi-day-cloudy-gusts:before {
-  content: "\f000";
-}
-.wi-day-cloudy-windy:before {
-  content: "\f001";
-}
-.wi-day-cloudy:before {
-  content: "\f002";
-}
-.wi-day-fog:before {
-  content: "\f003";
-}
-.wi-day-hail:before {
-  content: "\f004";
-}
-.wi-day-lightning:before {
-  content: "\f005";
-}
-.wi-day-rain-mix:before {
-  content: "\f006";
-}
-.wi-day-rain-wind:before {
-  content: "\f007";
-}
-.wi-day-rain:before {
-  content: "\f008";
-}
-.wi-day-showers:before {
-  content: "\f009";
-}
-.wi-day-snow:before {
-  content: "\f00a";
-}
-.wi-day-sprinkle:before {
-  content: "\f00b";
-}
-.wi-day-sunny-overcast:before {
-  content: "\f00c";
-}
-.wi-day-sunny:before {
+.wi-01d:before {
   content: "\f00d";
 }
-.wi-day-storm-showers:before {
-  content: "\f00e";
+.wi-01n:before {
+  content: "\f02e";
 }
-.wi-day-thunderstorm:before {
+.wi-02d:before {
+  content: "\f002";
+}
+.wi-02n:before {
+  content: "\f031";
+}
+.wi-03d:before {
+  content: "\f000";
+}
+.wi-03n:before {
+  content: "\f02f";
+}
+.wi-04d:before {
+  content: "\f001";
+}
+.wi-04n:before {
+  content: "\f030";
+}
+.wi-09d:before {
+  content: "\f009";
+}
+.wi-09n:before {
+  content: "\f037";
+}
+.wi-10d:before {
+  content: "\f008";
+}
+.wi-10n:before {
+  content: "\f036";
+}
+.wi-11d:before {
   content: "\f010";
+}
+.wi-11n:before {
+  content: "\f03b";
+}
+.wi-13d:before {
+  content: "\f00a";
+}
+.wi-13n:before {
+  content: "\f030";
+}
+.wi-50d:before {
+  content: "\f003";
+}
+.wi-50n:before {
+  content: "\f04a";
 }
 .wi-cloudy-gusts:before {
   content: "\f011";
@@ -129,84 +135,6 @@
 }
 .wi-windy:before {
   content: "\f021";
-}
-.wi-night-alt-cloudy-gusts:before {
-  content: "\f022";
-}
-.wi-night-alt-cloudy-windy:before {
-  content: "\f023";
-}
-.wi-night-alt-hail:before {
-  content: "\f024";
-}
-.wi-night-alt-lightning:before {
-  content: "\f025";
-}
-.wi-night-alt-rain-mix:before {
-  content: "\f026";
-}
-.wi-night-alt-rain-wind:before {
-  content: "\f027";
-}
-.wi-night-alt-rain:before {
-  content: "\f028";
-}
-.wi-night-alt-showers:before {
-  content: "\f029";
-}
-.wi-night-alt-snow:before {
-  content: "\f02a";
-}
-.wi-night-alt-sprinkle:before {
-  content: "\f02b";
-}
-.wi-night-alt-storm-showers:before {
-  content: "\f02c";
-}
-.wi-night-alt-thunderstorm:before {
-  content: "\f02d";
-}
-.wi-night-clear:before {
-  content: "\f02e";
-}
-.wi-night-cloudy-gusts:before {
-  content: "\f02f";
-}
-.wi-night-cloudy-windy:before {
-  content: "\f030";
-}
-.wi-night-cloudy:before {
-  content: "\f031";
-}
-.wi-night-hail:before {
-  content: "\f032";
-}
-.wi-night-lightning:before {
-  content: "\f033";
-}
-.wi-night-rain-mix:before {
-  content: "\f034";
-}
-.wi-night-rain-wind:before {
-  content: "\f035";
-}
-.wi-night-rain:before {
-  content: "\f036";
-}
-.wi-night-showers:before {
-  content: "\f037";
-}
-.wi-night-snow:before {
-  content: "\f038";
-}
-.wi-night-sprinkle:before {
-  content: "\f039";
-}
-.wi-night-storm-showers:before {
-  content: "\f03a";
-}
-.wi-night-thunderstorm:before {
-  content: "\f03b";
 }
 .wi-celsius:before {
   content: "\f03c";

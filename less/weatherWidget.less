@@ -57,6 +57,14 @@ section.weather-widget {
   .information {
     display: inline-block;
     color: @icon;
+
+    .description {
+      display: block;
+      float: left;
+//        margin-right: 60px;
+      color: @icon;
+      font-size: 1em;
+    }
   }
   .temperature {
     //padding: 10px 0px;  
@@ -71,6 +79,8 @@ section.weather-widget {
     &:hover {
       color: yellow;
     }
+
+
     /*
     h2 {
       display: inline;

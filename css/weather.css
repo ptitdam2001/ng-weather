@@ -1645,6 +1645,12 @@ section.weather-widget .information {
   display: inline-block;
   color: #3d414c;
 }
+section.weather-widget .information .description {
+  display: block;
+  float: left;
+  color: #3d414c;
+  font-size: 1em;
+}
 section.weather-widget .temperature {
   margin-right: 5px;
   padding-right: 5px;
