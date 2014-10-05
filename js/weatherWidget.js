@@ -9,13 +9,16 @@ var WeatherModule = angular.module('WeatherModule', [])
 
 	var templateHtml = '<section class="weather-widget">'
   +'<h1>{{weatherData.name}}</h1>'
-  +'<div class="temperature wi wi-day-cloudy-windy"></div>'
+  +'<table><tr><td>'
+  +'<div class="temperature wi wi-{{weatherData.weather.0.icon}}"></div>'
  // +'  <h2>{{weatherData.main.temp | number : 1}}<span class="degree-symbol">°</span><span class="celcius">C</span></h2>'
-  +'<ul class="information">'
-  +'  <li>{{weatherData.weather.0.description}}</li>'
-  +'  <li></li>'
-  +'</ul>'
+  +'</td><td>'
   +'<div class="ico_temp"><div class="de"><div class="den"><div class="dene"><div class="denem"><div class="deneme">{{weatherData.main.temp | number : 0}}<strong>&deg;</strong></div></div></div></div></div></div>'
+  +'</td><td>'
+  +'<div class="information">'
+  +'  <span class="description">{{weatherData.weather.0.description}}</span>'
+  +'</div>'
+  +'</td></tr></table>'
   +'<ul>'
   +'  <li class="fontawesome-leaf left">'
   +'    <span>{{weatherData.wind.speedkmh | number : 1}} km/h</span>'
@@ -48,7 +51,7 @@ var WeatherModule = angular.module('WeatherModule', [])
 			    //change mps to kmh
 			    $scope.weatherData.wind.speedkmh = $scope.weatherData.wind.speed * 3.6;
 
-			    console.log($scope.weatherData);
+//			    console.log($scope.weatherData);
 
 			  }).
 			  error(function(data, status, headers, config) {
