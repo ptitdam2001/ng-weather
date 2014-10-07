@@ -2,7 +2,7 @@
 
 #install http-server if not exists
 if ! type "http-server" > /dev/null; then
-  npm install http-server -g
+  sudo npm install http-server -g
 fi
 
 #execute http-server
