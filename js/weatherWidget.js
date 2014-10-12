@@ -24,8 +24,6 @@ var WeatherModule = angular.module('WeatherModule', [])
 				$scope.showMode = 'complete';
 			}
 
-console.log($scope.showMode);
-
 			//make openweather uri in function parameters
 			var queryString = '';
 			if (angular.isDefined($scope.cityName)) {
