@@ -25,3 +25,5 @@ Available parameters
 
 + lang : the language to display
 + city : what city which we want display its weather
++ city-lat [Optional] : the latitud of the city
++ city-lon [Optional] : the longitud of the city
