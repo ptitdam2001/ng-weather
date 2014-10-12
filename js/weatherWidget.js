@@ -13,9 +13,19 @@ var WeatherModule = angular.module('WeatherModule', [])
 			longitud: '@cityLon',
 			latitud: '@cityLat',
 			cityName: '@city',
-			lang: '@lang'
+			lang: '@lang',
+			showMode: '@mode'
 		},
 		link: function($scope, $element, $attrs) {
+			//define mode
+			if (angular.isDefined($scope.showMode) && ($scope.showMode == 'light' || $scope.showMode == 'lite')) {
+				$scope.showMode = 'light';
+			} else {
+				$scope.showMode = 'complete';
+			}
+
+console.log($scope.showMode);
+
 			//make openweather uri in function parameters
 			var queryString = '';
 			if (angular.isDefined($scope.cityName)) {

@@ -20,9 +20,12 @@ Add js/weatherWidget.js into html links
 Inject module 'WeatherModule' into the main application
 implement the tag '<widget-weather lang="fr" city="montpellier"></widget-weather>'
 
+By default, the language is english.
+
 Available parameters
 =========
 
++ mode : 'complete' by default, if mode="light|lite" then we display a light wersion of the widget
 + lang : the language to display
 + city : what city which we want display its weather
 + city-lat [Optional] : the latitud of the city
