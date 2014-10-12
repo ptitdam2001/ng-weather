@@ -23,6 +23,10 @@ var WeatherModule = angular.module('WeatherModule', [])
 			} else if (angular.isDefined($scope.longitud) && angular.isDefined($scope.latitud)){
 				queryString += "lat=" + $scope.latitud + '&lon=' + $scope.longitud;
 			}
+
+			//init loader
+			$scope.showContent = false;
+
 			$http({method: 'GET', url: 'http://api.openweathermap.org/data/2.5/weather?'+queryString+'&lang='+$scope.lang+'&units=metric'}).
 			  success(function(data, status, headers, config) {
 
@@ -32,8 +36,7 @@ var WeatherModule = angular.module('WeatherModule', [])
 
 			    //change mps to kmh
 			    $scope.weatherData.wind.speedkmh = $scope.weatherData.wind.speed * 3.6;
-
-//			    console.log($scope.weatherData);
+				$scope.showContent = false;
 
 			  }).
 			  error(function(data, status, headers, config) {
