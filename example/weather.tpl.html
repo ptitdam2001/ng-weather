@@ -13,16 +13,27 @@
         <div class="complete-mode" ng-hide="{{showMode == 'light'}}">
             <h1>{{weatherData.name}}</h1>
             <table>
-                <tr><td>
-                <div class="temperature wi wi-{{weatherData.weather.0.icon}}"></div>
-                <!--<h2>{{weatherData.main.temp | number : 1}}<span class="degree-symbol">°</span><span class="celcius">C</span></h2>-->
-                </td><td>
-                <div class="ico_temp"><div class="de"><div class="den"><div class="dene"><div class="denem"><div class="deneme">{{weatherData.main.temp | number : 0}}<strong>&deg;</strong><!--<i class="wi wi-celsius"></i>--></div></div></div></div></div></div>
-                </td><td>
-                <div class="information">
-                    <span class="description">{{weatherData.weather.0.description}}</span>
-                </div>
-                </td></tr>
+                <tr ng-repeat="weather in weatherData.weather">
+                    <td><div class="temperature wi wi-{{weather.icon}}"></div></td>
+                    <td>
+                        <div class="ico_temp">
+                        <div class="de">
+                            <div class="den">
+                                <div class="dene">
+                                    <div class="denem">
+                                        <div class="deneme">{{weatherData.main.temp | number : 0}}<strong>&deg;</strong></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="information">
+                            <span class="description">{{weather.description}}</span>
+                        </div>
+                    </td>
+                </tr>
             </table>
             <ul>
                 <li class="fontawesome-leaf left">
@@ -37,11 +48,12 @@
             </ul>
         </div>
         <div class="light-mode" ng-show="{{showMode == 'light'}}">
-            <div class="temperature wi wi-{{weatherData.weather.0.icon}} small"></div>
+            <span ng-repeat="weather in weatherData.weather"><div class="temperature wi wi-{{weather.icon}} small"></div></span>
             <div class="" style="display:inline-block;">
                 {{weatherData.main.temp | number : 0}}<i class="wi wi-celsius"></i>
             </div>
             <div class="" style="display:inline-block;">{{weatherData.name}}</div>
         </div>
+
     </div>
 </section>
