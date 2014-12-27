@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="ptitdamioApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather widget</title>
+  <link rel="stylesheet" media="screen" href="css/bootstrap.css">
+	<link rel="stylesheet" media="screen" href="main.css">
+  <link rel="stylesheet" media="screen" href="assets/css/weather-icons.min.css">
+  <link rel="stylesheet" media="screen" href="assets/css/weather.css">
+  <script src="js/libraries.js" type="text/javascript"></script>
+  <script src="js/angular-resource.js" type="text/javascript"></script>
+  <script src="js/angular-route.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- Begin page content -->
+    <div class="container">
+     <table>
+      <tr>
+        <td><widget-weather lang="fr" city="montpellier" mode="light"></widget-weather></td>
+        <td></td>
+      </tr>
+      <tr>
+          <td>
+          <widget-weather lang="fr" city-lat="35.69" city-lon="139.69"></widget-weather>
+          </td><td>        
+          <widget-weather lang="fr" city="montpellier"></widget-weather>
+        </td>
+      </tr>
+      <tr>
+          <td>
+              <widget-weather lang="fr" city="bagdad"></widget-weather>
+          </td>
+          <td>
+              <widget-weather lang="fr" city="new york"></widget-weather>
+          </td>
+      </tr>
+      </table>
+    </div>
+	
+  <script src="main.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/application.js"></script>
+  
+</body>
+</html>
