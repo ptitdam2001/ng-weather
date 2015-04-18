@@ -9,7 +9,7 @@ angular.module('WeatherModule', []).directive('widgetWeather', function($q, $htt
 		restrict: 'E',
 		priority: 10,
 		//terminal: false,
-		templateUrl: 'weather.tpl.html',
+		templateUrl: 'weather2.tpl.html',
 		replace: true,
 		transclude: false,
 		scope: {

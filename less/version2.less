@@ -1,0 +1,111 @@
+/* Colors declarations */
+
+@lighterGray:     #E0E1E3;
+@lightGray:       #4b4e57;
+@mediumGray:      #373B46;
+@darkGray:        #1F222A;
+@darkerGray:      black;
+@pink:            rgba(255, 255, 126, 0.9);
+@font:            #eee;
+@fontsize:		  1em;
+@darkFont:        #60646e;
+@icon:            #efefce;
+@icon_hover:		  yellow;
+
+@bigWidth:		  250px;
+@bigHeight:		  150px;
+@smallWidth:	  150px;
+@smallHeight:	  100px;
+
+section.weather-widget {
+
+	box-sizing: border-box;
+	padding: 5px 10px;
+	width: @bigWidth;
+	height: @bigHeight;
+
+	&.small-size {
+		width: @smallWidth;
+		height: @smallHeight;
+	}
+	
+	background-color: @darkGray;
+	border-radius: 10px;
+	color: @font;
+	font-family: 'Open Sans', sans-serif;
+
+	.header {
+		h5 {
+			margin: 5px;
+		}
+	}
+
+	.temperature {
+		margin-right: 5px;
+		padding-right: 5px;
+		color: @icon;
+		font-size: 80px;
+		height: 80px;
+		transition: color 0.5s ease;
+		display: inline-block;
+
+		&.small {
+			font-size: 40px;
+			height: 40px;
+		}
+
+		&:hover {
+			color: @icon_hover;
+		}
+	}
+
+	ul {
+		padding: 5px;
+
+		li {
+			display: block;
+			color: @icon;
+			font-size: @fontsize;
+
+			span {
+				padding-left: 10px;   
+				color: @icon;
+				line-height: 30px;
+				vertical-align: top;
+			}
+		}
+	}
+}
+
+//----------------------
+// Weather icons
+
+@bgcolor: white;
+@bgcolorhover: yellow;
+@widthlarge: 90px;
+@heightlarge: 70px;
+
+@widthsmall: 20px;
+@heightsmall: 20px;
+
+.wicons {
+	&.large {
+		width: @widthlarge;
+		height: @heightlarge;
+	}
+
+	&.small {
+		width: @widthsmall;
+		height: @heightsmall;
+	}
+	 
+}
+
+#weather-icon {
+	stroke: @bgcolor;
+	fill: @bgcolor;
+
+	&:hover {
+		fill: @bgcolorhover;
+	}
+}

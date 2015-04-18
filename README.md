@@ -4,14 +4,36 @@ ng-weather
 Angular Directive which show weather
 
 
+Environment
+==========
+
+Go to project directory
+
+```
+npm install
+
+bower install
+
+npm install -g grunt-cli (if not installed)
+
+grunt production
+
+```
+
+
 Example
 ==========
 To display the example, you can execute ./server.sh
 
 If there is a problem, you must install npm and http-server via npm
 
-- npm install http-server -g
-- http-server -o --cors -i
+```
+npm install http-server -g
+```
+
+```
+http-server -o --cors -i
+``
 
 How to install directive
 ==========
