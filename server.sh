@@ -6,4 +6,4 @@ if ! type "http-server" > /dev/null; then
 fi
 
 #execute http-server
-http-server -o --cors -i
+http-server --cors -i -o
