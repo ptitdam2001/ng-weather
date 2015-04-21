@@ -10,12 +10,12 @@
 @fontsize:		  1em;
 @darkFont:        #60646e;
 @icon:            #efefce;
-@icon_hover:		  yellow;
+@icon_hover:	  yellow;
 
 @bigWidth:		  250px;
 @bigHeight:		  150px;
 @smallWidth:	  150px;
-@smallHeight:	  100px;
+@smallHeight:	  80px;
 
 section.weather-widget {
 
@@ -88,6 +88,9 @@ section.weather-widget {
 @widthsmall: 20px;
 @heightsmall: 20px;
 
+@widthmedium: 50px;
+@heightmedium: 50px;
+
 .wicons {
 	&.large {
 		width: @widthlarge;
@@ -98,6 +101,11 @@ section.weather-widget {
 		width: @widthsmall;
 		height: @heightsmall;
 	}
+
+	&.medium {
+		width: @widthmedium;
+		height: @heightmedium;
+	}
 	 
 }
 
@@ -107,5 +115,11 @@ section.weather-widget {
 
 	&:hover {
 		fill: @bgcolorhover;
+	}
+}
+section.weather-widget {
+	.small-desc-part {
+		height: @widthmedium;
+  		line-height: @widthmedium;
 	}
 }
