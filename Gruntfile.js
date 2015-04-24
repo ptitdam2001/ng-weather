@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 
 	//variables
 	var basePath = 'example';
-	var jsDist = 'dist/application.js';
+	var jsDist = 'dist/ptitdamWeather.js';
 	var jsSource = ['libs/**/*.js', 'app/**/*.js', 'app/app.js']
 
 	//global beforeEach
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
 			dest: basePath + '/js/libraries.js'
 		},
 		app: {
-			src: ['app/*.js', 'app/controllers/*.js', 'app/directives/*.js', 'app/filters/*.js'],
+			src: ['app/*.js', 'app/services/*.js', 'app/controllers/*.js', 'app/directives/*.js', 'app/filters/*.js'],
 			dest: basePath + '/js/application.js'
 		}
 	},
@@ -185,9 +185,10 @@ module.exports = function(grunt) {
 
 
 	//Grunt Tasks definition
-	grunt.registerTask('default', ['dev', 'watch']) 
-	grunt.registerTask('init-js-libs', ['concat:libs', 'copy:angular'])
-	grunt.registerTask('dev', ['less:compileAsset', 'less:compileBootstrap', 'init-js-libs', 'concat:app', 'copy:moveHtmlToDist', 'copy:moveAssets']);
-	grunt.registerTask('demo', ['less:compileAsset', 'less:compileBootstrap', 'init-js-libs', 'concat:app', 'copy:moveHtmlToDist', 'copy:moveAssets', 'connect:demo']);
-	grunt.registerTask('production', ['less:compileAsset', 'less:compileBootstrap', 'uglify:libs', 'uglify:app', 'copy:moveHtmlToDist', 'copy:moveAssets'])
+	grunt.registerTask('default', ['dev', 'watch']);
+	grunt.registerTask('init-js-libs', ['concat:libs', 'copy:angular']);
+	grunt.registerTask('init-css', ['less:compileAsset', 'less:compileBootstrap']);
+	grunt.registerTask('dev', ['init-css', 'init-js-libs', 'concat:app', 'copy:moveHtmlToDist', 'copy:moveAssets']);
+	grunt.registerTask('demo', ['init-css', 'init-js-libs', 'concat:app', 'copy:moveHtmlToDist', 'copy:moveAssets', 'connect:demo']);
+	grunt.registerTask('production', ['init-css', 'uglify:libs', 'uglify:app', 'copy:moveHtmlToDist', 'copy:moveAssets']);
 }
