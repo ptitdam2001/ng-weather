@@ -25,15 +25,12 @@ Example
 ==========
 To display the example, you can execute ./server.sh
 
-If there is a problem, you must install npm and http-server via npm
+If there is a problem, you must install npm and express
 
 ```
-npm install http-server -g
+node server.js
 ```
 
-```
-http-server -o --cors -i
-```
 
 How to install directive
 ==========
