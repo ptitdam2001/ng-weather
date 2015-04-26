@@ -2,8 +2,7 @@ weatherModule.directive('widgetWeather', ['openWeatherMapService', function(open
 	return {
 		restrict: 'E',
 		priority: 10,
-		//terminal: false,
-		templateUrl: 'weather2.tpl.html',
+		templateUrl: 'weather.tpl.html',
 		replace: true,
 		transclude: false,
 		scope: {
