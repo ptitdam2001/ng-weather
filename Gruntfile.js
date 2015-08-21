@@ -27,6 +27,15 @@ module.exports = function(grunt) {
 		jshint: {
 			all: ['Gruntfile.js', 'libs/**/*.js', 'app/**/*.js','test/**/*.js']
 		},
+		angular_template_inline_js: {
+        options: {
+            basePath: __dirname
+        },
+        production: {
+            src:  dist_path + "tmp.js",
+            dest: dist_path + "tmp_inline.js"
+        }
+    },
 		less: {
 			dist: {
 				options: {
@@ -34,8 +43,8 @@ module.exports = function(grunt) {
 					cleancss: true,
 					imports: {
 						reference: [
-						"less/mixins.less", 
-						"less/variables.less" 
+						"less/mixins.less",
+						"less/variables.less"
 						]
 					}
 		  		},
@@ -57,8 +66,8 @@ module.exports = function(grunt) {
 		          // Use the new "reference" directive, e.g.
 		          // @import (reference) "variables.less";
 						reference: [
-						"less/mixins.less", 
-						"less/variables.less" 
+						"less/mixins.less",
+						"less/variables.less"
 						]
 					}
 		  		},
@@ -128,7 +137,7 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				src: ['app/*.js', 'app/services/*.js', 'app/controllers/*.js', 'app/directives/*.js', 'app/filters/*.js'],
-				dest: jsDist		
+				dest: jsDist
 			}
 		},
 		uglify: {
@@ -148,19 +157,19 @@ module.exports = function(grunt) {
 			moveHtmlToDist: {
 				files: [
 					{
-						src: 'app/index.html', 
+						src: 'app/index.html',
 						dest: 'dist/index.html'
 					},
 					{
-						expand: true, 
-						flatten: true, 
-						src: ['app/templates/**/*.html'], 
+						expand: true,
+						flatten: true,
+						src: ['app/templates/**/*.html'],
 						dest: basePath
 					},
 					{
-						expand: true, 
-						flatten: true, 
-						src: ['app/templates/**/*.html'], 
+						expand: true,
+						flatten: true,
+						src: ['app/templates/**/*.html'],
 						dest: PathDist
 					},
 					{
@@ -178,10 +187,10 @@ module.exports = function(grunt) {
 			angular: {
 				files: [
 				{
-					expand: true, 
-					flatten: true, 
-					src: ['libs/angular-*/angular-*.min.js', 'libs/angular-*/angular-*.js', 'libs/angular-*/angular-*.min.js.map'], 
-					dest: basePath + '/js', 
+					expand: true,
+					flatten: true,
+					src: ['libs/angular-*/angular-*.min.js', 'libs/angular-*/angular-*.js', 'libs/angular-*/angular-*.min.js.map'],
+					dest: basePath + '/js',
 					filter: 'isFile'
 				}
 				]
@@ -198,7 +207,7 @@ module.exports = function(grunt) {
 					middleware: function(connect, options) {
 
 						var base = Array.isArray(options.base) ? options.base[options.base.length - 1] : options.base;
-						
+
 						return [
 							//Enable CORS
 							connect().use(function (req, res, next) {

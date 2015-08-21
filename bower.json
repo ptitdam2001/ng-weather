@@ -1,14 +1,25 @@
 {
-  "name": "ng-weather",
-  "authors": ["Damien Suhard"],
+  "name": "ptitdam-ng-openweathermap",
+  "authors": [
+    "Damien Suhard <ptitdam2001@gmail.com>"
+  ],
+  "main": [
+    "dist/assets/*",
+    "dist/*.js",
+    "dist/*.css"
+  ],
   "description": "An AngularJs weather directive",
-  "keywords": ["angular", "boilerplate", "directive", "weather"],
-  "version": "0.2.0",
+  "keywords": [
+    "angular",
+    "directive",
+    "weather",
+    "openweathermap",
+    "service"
+  ],
+  "version": "1.0.0",
   "dependencies": {
     "angular": "latest",
     "angular-resource": "latest",
-    "angular-route": "latest",
-    "bootstrap": "latest",
-    "jquery": "latest"
+    "angular-material": "lastest"
   }
 }

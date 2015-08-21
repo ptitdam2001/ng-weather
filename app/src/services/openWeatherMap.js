@@ -1,4 +1,4 @@
-weatherModule.service("openWeatherMapService", ['$http', 
+weatherModule.service("openWeatherMapService", ['$http',
 	function($http) {
 
 		var basePath = 'http://api.openweathermap.org/data/2.5/';
@@ -11,7 +11,7 @@ weatherModule.service("openWeatherMapService", ['$http',
 			//coordinates
 			if (angular.isDefined(parameters.city) && parameters.city != null) {
 				queryString += "q=" + parameters.city;
-			} else if (angular.isDefined(parameters.longitud) && angular.isDefined(parameters.latitud) && parameters.longitud != null && parameters.latitud != null){
+			} else if (angular.isDefined(parameters.longitud) && angular.isDefined(parameters.latitud) && parameters.longitud != null && parameters.latitud != null) {
 				queryString += "lat=" + parameters.latitud + '&lon=' + parameters.longitud;
 			} else if (angular.isDefined(parameters.id) && parameters.id != null) {
 				queryString += 'id=' + parameters.id;
@@ -41,7 +41,7 @@ weatherModule.service("openWeatherMapService", ['$http',
 
 		function executeQuery(uri, successCallback, errorCallback) {
 			$http({
-				method: 'GET', 
+				method: 'GET',
 				url: uri
 			}).
 			success(function(data, status, headers, config) {
@@ -57,8 +57,6 @@ weatherModule.service("openWeatherMapService", ['$http',
 			    }
 			});
 		}
-
-
 		this.getWeatherInfo = function(city, longitud, latitud, lang, successCallback, errorCallback) {
 			//make openweather uri in function parameters
 			var queryString = makeRequest({
