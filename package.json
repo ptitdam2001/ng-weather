@@ -2,7 +2,10 @@
   "name": "ptitdam-ng-openweathermap",
   "version": "1.0.0",
   "devDependencies": {
+    "angular-template-inline-js": "*",
+    "express": "*",
     "grunt": "*",
+    "grunt-angular-template-inline-js": "*",
     "grunt-contrib-concat": "*",
     "grunt-contrib-connect": "*",
     "grunt-contrib-copy": "*",
@@ -12,14 +15,11 @@
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-livereload": "*",
-    "angular-template-inline-js": "*",
-    "express": "*",
-    "grunt-angular-template-inline-js": "*"
+    "gulp": "^3.9.0"
   },
   "description": "Angular JS Weather directive with openweathermap",
   "main": "Gruntfile.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
