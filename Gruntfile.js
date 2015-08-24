@@ -32,8 +32,8 @@ module.exports = function(grunt) {
             basePath: __dirname
         },
         production: {
-            src:  dist_path + "tmp.js",
-            dest: dist_path + "tmp_inline.js"
+            src:  PathDist + "tmp.js",
+            dest: PathDist + "tmp_inline.js"
         }
     },
 		less: {

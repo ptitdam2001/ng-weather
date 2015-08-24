@@ -1,3 +1,6 @@
-'use strict';
+(function() {
+    'use strict';
 
-var weatherModule = angular.module('ptitdam-ng-openweathermap', []);
+    angular.module('ptitdam-ng-openweathermap', []);
+
+})();

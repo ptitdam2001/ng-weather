@@ -1,23 +1,32 @@
-"use strict";
+(function () {
+    'use strict';
 
-weatherModule.controller('widgetCtrl', ['$scope', 'openWeatherMapService', function($scope, openWeatherMapService) {
-  $scope.weatherData = {};
+    angular
+        .module('ptitdam-ng-openweathermap')
+        .controller('widgetCtrl', widgetCtrl);
 
-  var onError = function(data) {
-    $scope.weatherData.wind = {};
-    $scope.weatherData.wind.speedkmh = 0;
-  };
+    function widgetCtrl(openWeatherMapService) {
+        var ctrl = this;
 
-  var onSuccess = function(data) {
-    // this callback will be called asynchronously
-      // when the response is available
-      $scope.weatherData = data;
-      //change mps to kmh
-      $scope.weatherData.wind.speedkmh = $scope.weatherData.wind.speed * 3.6;
-    $scope.showContent = true;
-  };
+        ctrl.weatherData = {};
+        ctrl.showContent = false;
 
-  //make openweather uri in function parameters
-  $scope.showContent = false;
-  openWeatherMapService.getWeatherInfo($scope.cityName, $scope.longitud, $scope.latitud, $scope.lang, onSuccess, onError);
-});
+
+        var onError = function (error) {
+            ctrl.weatherData.wind = {};
+            ctrl.weatherData.wind.speedkmh = 0;
+        };
+
+        var onSuccess = function (data) {
+            // this callback will be called asynchronously
+            // when the response is available
+            ctrl.weatherData = data;
+            //change mps to kmh
+            ctrl.weatherData.wind.speedkmh = ctrl.weatherData.wind.speed * 3.6;
+            ctrl.showContent = true;
+        };
+
+        //make openweather uri in function parameters
+        openWeatherMapService.getWeatherInfo(ctrl.cityName, ctrl.longitud, ctrl.latitud, ctrl.lang, onSuccess, onError);
+    }
+})();
