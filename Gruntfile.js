@@ -52,7 +52,7 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						cwd: 'less',
-						src: ['weather.less', '!{var,mix,version}*.less'],
+						src: ['main.less', '!{var,mix,version}*.less'],
 						dest: PathDist,
 						ext: '.css'
 					}
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						cwd: 'less',
-						src: ['weather.less', '!{var,mix,version}*.less'],
+						src: ['main.less', '!{var,mix,version}*.less'],
 						dest: basePath + '/css',
 						ext: '.css'
 					}

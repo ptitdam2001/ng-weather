@@ -5,6 +5,7 @@
         .module('ptitdam-ng-openweathermap')
         .controller('widgetCtrl', widgetCtrl);
 
+    /** ng-inject */
     function widgetCtrl(openWeatherMapService) {
         var ctrl = this;
 

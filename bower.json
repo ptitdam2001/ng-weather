@@ -6,7 +6,8 @@
   "main": [
     "dist/assets/*",
     "dist/*.js",
-    "dist/*.css"
+    "dist/*.css",
+    "dist/*.map"
   ],
   "description": "An AngularJs weather directive",
   "keywords": [
@@ -16,7 +17,7 @@
     "openweathermap",
     "service"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "dependencies": {
     "angular": "latest",
     "angular-resource": "latest",

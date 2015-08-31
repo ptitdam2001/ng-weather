@@ -6,7 +6,7 @@
 		.directive('widgetWeather', function() {
 			return {
 				restrict: 'E',
-				templateUrl: 'src/templates/weather.tpl.html',
+				templateUrl: 'app/src/templates/weather.tpl.html',
 				replace: true,
 				transclude: false,
 				scope: {

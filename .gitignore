@@ -39,6 +39,4 @@ com_crashlytics_export_strings.xml
 .idea/workspace.xml
 /node_modules/
 /libs/
-/example/css/
-/example/assets/
-/example/js/
+.tmp/

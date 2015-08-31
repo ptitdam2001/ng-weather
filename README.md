@@ -35,7 +35,7 @@ node server.js
 How to install directive
 ==========
 
-Add js/weatherWidget.js into html links
+Add js/widget.directive.js into html links
 Inject module 'WeatherModule' into the main application
 implement the tag '<widget-weather lang="fr" city="montpellier"></widget-weather>'
 
