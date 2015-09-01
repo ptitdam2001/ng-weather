@@ -19,8 +19,11 @@
   ],
   "version": "1.1.0",
   "dependencies": {
-    "angular": "latest",
-    "angular-resource": "latest",
-    "angular-material": "lastest"
+    "angular": "1.*",
+    "angular-resource": "1.*",
+    "angular-material": "*"
+  },
+  "devDependencies": {
+    "angular-route": "~1.4.5"
   }
 }

@@ -6,14 +6,13 @@
         .controller('widgetCtrl', widgetCtrl);
 
     /** ng-inject */
-    function widgetCtrl(openWeatherMapService) {
+    function widgetCtrl($scope, openWeatherMapService, $log) {
         var ctrl = this;
 
         ctrl.weatherData = {};
         ctrl.showContent = false;
 
-
-        var onError = function (error) {
+        var onError = function () {
             ctrl.weatherData.wind = {};
             ctrl.weatherData.wind.speedkmh = 0;
         };
@@ -28,6 +27,6 @@
         };
 
         //make openweather uri in function parameters
-        openWeatherMapService.getWeatherInfo(ctrl.cityName, ctrl.longitud, ctrl.latitud, ctrl.lang, onSuccess, onError);
+        openWeatherMapService.getWeatherInfo($scope.cityName, $scope.longitud, $scope.latitud, $scope.lang, onSuccess, onError);
     }
 })();

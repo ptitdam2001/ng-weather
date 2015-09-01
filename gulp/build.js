@@ -54,3 +54,5 @@ gulp.task('build:assets', function() {
     gulp.src([path.join(conf.paths.app, '/assets/**/*.*')])
         .pipe(gulp.dest(path.join(conf.paths.dist, '/assets')));
 });
+
+gulp.task('build', ['build:js', 'build:css', 'build:assets']);

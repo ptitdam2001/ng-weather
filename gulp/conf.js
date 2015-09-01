@@ -5,9 +5,18 @@ var gutil = require('gulp-util');
  */
 exports.paths = {
     app: 'app',
+    src: 'app/src',
     dist: 'dist',
-    tmp: '.tmp'
+    tmp: '.tmp',
+    example: 'example'
 };
+
+exports.wiredep = {
+    exclude: [],
+    directory: 'bower_components',
+    devDependencies: true
+};
+
 
 /**
  *  Common implementation for an error handler of a Gulp plugin

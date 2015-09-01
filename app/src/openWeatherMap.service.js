@@ -69,7 +69,6 @@
                     'latitud' : angular.isDefined(latitud) ? latitud : null,
                     'lang' : angular.isDefined(lang) ? lang : 'en'
                 });
-
                 executeQuery(weatherPath + '?' + queryString, successCallback, errorCallback);
             };
 
