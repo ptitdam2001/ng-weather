@@ -37,6 +37,7 @@ com_crashlytics_export_strings.xml
 /build/
 .DS_Store
 .idea/workspace.xml
-/node_modules/
+node_modules/
+bower_components/
 /libs/
 .tmp/
